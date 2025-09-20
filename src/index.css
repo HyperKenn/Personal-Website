@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small utilities */
+:root {
+  --muted: #6b7280;
+}
+
+/* Simple focus ring for keyboard users */
+:focus {
+  outline: 3px solid rgba(79,70,229,0.16);
+  outline-offset: 4px;
+}
+
+/* Fix anchor links with fixed navbar */
+html {
+    scroll-padding-top: 2.5rem; /* adjust this to match your navbar height */
+  }
+  

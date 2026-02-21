@@ -1,40 +1,113 @@
-import React from 'react'
-import ContactMenu from './ContactMenu';
+import React from "react";
+import ContactMenu from "./ContactMenu";
+import RotatingWords from "./RotatingWords";
 
 export default function Here() {
   return (
-    <section id="home" className="pt-6 pb-12">
-      <div className="grid gap-6 md:grid-cols-3 items-center">
-        <div className="md:col-span-2">
-          <p className="text-sm text-brand-500 font-medium">Hi, I'm</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-2">Kenneth Arianto</h1>
-          <p className="mt-4 text-lg text-gray-700 max-w-2xl leading-relaxed">
-          Third-year Computer Science student at the University of British Columbia, constantly learning and practicing through personal and academic projects.
-        I am passionate about software development, artificial intelligence, machine learning, and backend engineering.
-          </p>
-            {/* Buttons */}
-          <div className="mt-6 flex items-center gap-3">
-            <a href="#projects" className="inline-block px-4 py-2 rounded-md bg-brand-550 text-white font-medium hover:bg-brand-550">Projects</a>
-            {/* Contact dropdown menu */}
+    <section id="home" className="mx-auto max-w-4xl px-6 pt-24 pb-12">
+    <div className="grid items-center gap-14 md:gap-20 md:grid-cols-2">
+        {/* Left: Text */}
+        <div>
+          <p className="text-sm font-medium text-brand-500">Hi, I&apos;m</p>
+
+          <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
+            Kenneth Arianto
+            </h1>
+
+            <h2 className="mt-4 text-3xl font-light italic tracking-wide text-gray-800 md:text-4xl">
+            I am a{" "}
+            <span className="italic font-semibold text-blue-600">
+                <RotatingWords words={["Developer", "Engineer", "Student"]} />
+            </span>
+            </h2>
+            <p
+            className="mt-4 max-w-xl text-base leading-relaxed text-gray-700 md:text-lg"
+            style={{ fontFamily: "Calibri, sans-serif" }}
+            >
+            Third-year Computer Science student at UBC Vancouver, constantly
+            learning and practicing through personal and academic projects. I am
+            passionate about software development, artificial intelligence,
+            machine learning, and backend engineering.
+            </p>
+
+          {/* Buttons */}
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <a
+              href="/resume.pdf"
+              download="Kenneth_Arianto_Resume.pdf"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-300 to-blue-600 px-6 py-2.5 text-sm font-medium text-white shadow-md transition duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+                />
+              </svg>
+              Resume
+            </a>
+
             <ContactMenu />
           </div>
 
-          <div className="mt-6 text-sm text-gray-600">
-            <div>Currently:</div>
-            <ul className="list-disc list-inside mt-2">
-              <li>BSc. Combined Major in Computer Science and Statistics Student @UBC</li>
-              <li>UBC Competitive Programming Club Member @UBC</li>
-            </ul>
-          </div>
+          {/* Currently */}
+            <div className="mt-8">
+            <p className="text-sm font-semibold text-gray-900 tracking-wide">
+                Currently
+            </p>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                
+                <div className="rounded-2xl border bg-white/60 p-5 backdrop-blur-sm">
+                <p className="text-sm font-semibold text-gray-900">
+                    BSc. CS + Statistics
+                </p>
+                <p className="mt-1 text-sm text-gray-600">
+                    @UBC Vancouver
+                </p>
+                </div>
+
+                <div className="rounded-2xl border bg-white/60 p-5 backdrop-blur-sm">
+                <p className="text-sm font-semibold text-gray-900">
+                    Competitive Programming Club
+                </p>
+                <p className="mt-1 text-sm text-gray-600">
+                    Member @UBC
+                </p>
+                </div>
+
+                <div className="rounded-2xl border bg-white/60 p-5 backdrop-blur-sm">
+                <p className="text-sm font-semibold text-gray-900">
+                    Teaching Assistant
+                </p>
+                <p className="mt-1 text-sm text-gray-600">
+                    CPSC 221  @UBC
+                </p>
+                </div>
+
+            </div>
+            </div>
         </div>
 
-        <div className="flex justify-center md:justify-end">
-          <div className="w-44 h-44 md:w-56 md:h-56 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
-            {/* Replace with a real image: put one in public/profile.jpg and update src */}
-            <img src="/images/profile.jpeg" alt="Kenneth Picture" className="object-cover w-full h-full" />
-          </div>
+        {/* Right: Image */}
+        <div className="relative -mt-28 flex justify-center md:justify-end">
+        <div className="blob h-96 w-96 overflow-hidden shadow-xl md:h-[26rem] md:w-[21rem]">
+                <img
+                src="/images/profile.jpeg"
+                alt="Kenneth Arianto"
+                className="h-full w-full object-cover"
+                loading="eager"
+                />
+            </div>
         </div>
-      </div>
+    </div>
     </section>
-  )
+  );
 }

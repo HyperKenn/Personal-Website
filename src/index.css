@@ -13,6 +13,30 @@
   outline-offset: 4px;
 }
 
+.blob {
+    border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+    animation: morph 8s ease-in-out infinite;
+  }
+  
+  @keyframes morph {
+    0% {
+      border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+    }
+    25% {
+      border-radius: 50% 50% 45% 55% / 60% 40% 60% 40%;
+    }
+    50% {
+      border-radius: 60% 40% 50% 50% / 45% 55% 45% 55%;
+    }
+    75% {
+      border-radius: 45% 55% 60% 40% / 55% 45% 50% 50%;
+    }
+    100% {
+      border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+    }
+  }
+
+a, button { -webkit-tap-highlight-color: transparent; }
 /* Fix anchor links with fixed navbar */
 html {
     scroll-padding-top: 2.5rem; /* adjust this to match your navbar height */

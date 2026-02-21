@@ -10,7 +10,7 @@ export default function Here() {
         <div className="order-1 flex justify-center md:order-2 md:justify-end">
           <div className="blob h-64 w-64 overflow-hidden shadow-xl sm:h-80 sm:w-80 md:h-[26rem] md:w-[21rem]">
             <img
-              src="src/public/images/profile.jpeg"
+              src="images/profile.jpeg"
               alt="Kenneth Arianto"
               className="h-full w-full object-cover object-center"
               loading="eager"
@@ -46,7 +46,7 @@ export default function Here() {
           {/* Buttons */}
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <a
-              href="src/public/Kenneth_Resume.pdf"
+              href="/Kenneth_Resume.pdf"
               download="Kenneth_Arianto_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-300 to-blue-600 px-6 py-2.5 text-sm font-medium text-white shadow-md transition duration-300 hover:scale-105 hover:shadow-lg"
             >

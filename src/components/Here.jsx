@@ -5,9 +5,21 @@ import RotatingWords from "./RotatingWords"
 export default function Here() {
   return (
     <section id="home" className="mx-auto max-w-4xl px-6 pt-24 pb-12">
-      <div className="grid items-center gap-14 md:gap-20 md:grid-cols-2">
-        {/* Left: Text */}
-        <div>
+      <div className="grid items-start gap-14 md:gap-20 md:grid-cols-2">
+        {/* IMAGE (shows first on mobile, right side on desktop) */}
+        <div className="order-1 flex justify-center md:order-2 md:justify-end">
+          <div className="blob h-64 w-64 overflow-hidden shadow-xl sm:h-80 sm:w-80 md:h-[26rem] md:w-[21rem]">
+            <img
+              src="/images/profile.jpeg"
+              alt="Kenneth Arianto"
+              className="h-full w-full object-cover object-center"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        {/* TEXT (shows after image on mobile, left side on desktop) */}
+        <div className="order-2 md:order-1">
           <p className="text-sm font-medium text-brand-500">Hi, I&apos;m</p>
 
           <h1 className="mt-2 text-4xl font-semibold tracking-tight md:text-5xl">
@@ -59,7 +71,7 @@ export default function Here() {
           </div>
 
           {/* Currently */}
-          <div className="mt-8">
+          <div className="mt-10">
             <p className="text-sm font-semibold text-gray-900 tracking-wide">
               Currently
             </p>
@@ -86,18 +98,6 @@ export default function Here() {
                 <p className="mt-1 text-sm text-gray-600">CPSC 221 @UBC</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Right: Image (FIXED for mobile) */}
-        <div className="relative mt-2 flex justify-center md:-mt-28 md:justify-end">
-          <div className="blob h-64 w-64 overflow-hidden shadow-xl sm:h-80 sm:w-80 md:h-[26rem] md:w-[21rem]">
-            <img
-              src="/images/profile.jpeg"
-              alt="Kenneth Arianto"
-              className="h-full w-full object-cover object-center"
-              loading="eager"
-            />
           </div>
         </div>
       </div>

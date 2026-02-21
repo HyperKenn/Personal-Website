@@ -22,7 +22,7 @@ const sampleProjects = [
         details: ['A web application for food waste management that tracks surplus ingredients, suggests recipes based on available food, and connects users with local donation options for unused items. Built using JavaScript on the frontend that allows user to access and modify data on the Oracle database.'],
         tech: ['HTML/CSS','Oracle', 'SQL', 'JavaScript', 'Git', 'GitHub'],
         demo: null,
-        github: null,
+        github: "https://github.com/HyperKenn/WasteNot",
     },
     {
       id: 'BrainTacToe',
@@ -32,7 +32,7 @@ const sampleProjects = [
       details: ['A Python-based web app to improve learning quality through a combination of flashcard learning system with tic tac toe game. Each correct answer grants a turn to play the tic tac toe.'],
       tech: ['HTML/CSS','Javascript','FastAPI', 'Python'],
       demo: null,
-        github: null,
+        github: "https://github.com/HyperKenn/HackCamp2024",
     },
     {
         id: 'TypeRacer',
@@ -45,7 +45,7 @@ const sampleProjects = [
         ],
         tech: ['HTML/CSS','Javascript','React'],
         demo: null,
-    github: null,
+    github: "https://github.com/HyperKenn/TypeRacerApp",
     },
     {
     id: 'Manga List',
@@ -59,7 +59,7 @@ const sampleProjects = [
       ],
     tech: ['Java', 'JFrame', 'Git'],
     demo: null,
-    github: null,
+    github: "https://github.com/HyperKenn/Manga_List",
     },
     {  
     id: 'Pulsar Star Classification',
@@ -73,7 +73,7 @@ const sampleProjects = [
       ],
     tech: ['Python', 'pandas', 'altair', 'sklearn'],
     demo: null,
-    github: null,
+    github: "https://github.com/HyperKenn/Pulsar_Star_Classification",
     },
     {
     id: 'Trapezoid Rule',
@@ -87,7 +87,7 @@ const sampleProjects = [
       ],
     tech: ['Python'],
     demo: null,
-    github: null,
+    github: "https://github.com/HyperKenn/Math101",
     }
 ]
 
